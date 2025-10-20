@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css">
+		<title>Major Project - Dwarves</title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#inners").mouseenter(function(){
+					$("#navInners").stop().show(1500);
+				}).mouseleave(function(){
+					$("#navInners").hide(1000);
+				});
+
+				$("#outers").mouseenter(function(){
+					$("#navOuters").stop().show(1500);
+				}).mouseleave(function(){
+					$("#navOuters").hide(1000);
+				});
+
+				$("#dwarves").mouseenter(function(){
+					$("#navDwarves").stop().show(1500);
+				}).mouseleave(function(){
+					$("#navDwarves").hide(1000);
+				});
+
+				$("nav#sideNav ul li a").click(function(event){
+					event.preventDefault();
+					var target = $( $(this).attr('href') ).position().top;
+					$('html,body').stop().animate({ 
+						scrollTop: target 
+					},{ 
+						duration: 1000
+					}) 
+				});
+				
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<main>
+
+			<header>
+				<h1>The Solar System</h1>	
+			</header>
+			
+
+			<img src="Images/earth-300px.png" alt="inners" class="hidden" id="navInners">
+
+			<img src="Images/jupiter-300px.png" alt="outers" class="hidden" id="navOuters">
+
+			<img src="Images/pluto-300px.png" alt="dwarves" class="hidden" id="navDwarves">
+
+			<nav id="navMain">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+
+					<li><a href="inners.html" class="mainNav" id="inners">Inners</a></li>
+
+					<li><a href="outers.html" class="mainNav" id="outers">Outers</a></li>
+
+					<li><a href="dwarves.html" class="mainNav" id="dwarves">Dwarfs</a></li>
+
+					<li><a href="sources.html">Sources</a></li>
+				</ul>
+
+			</nav>
+
+
+			<nav id="sideNav">
+				<ul>
+					<li><a href="#pluto">Pluto</a></li>
+					<li><a href="#ceres">Ceres</a></li>
+					<li><a href="#makemake">Makemake</a></li>
+					<li><a href="#haumea">Haumea</a></li>
+					<li><a href="#eris">Eris</a></li>
+				</ul>
+				
+			</nav>
+
+			<h1>Dwarf Planets</h1>
+
+			<p>Only recently has this been a new classification for these smaller objects orbiting our Sun. There have been 5 of these little ones discovered so far, most of which are located in the Kuiper Belt just on the outskirts of our system.</p>
+
+			<section>
+				<h2 id="pluto">Pluto</h2>
+				<p>Pluto is a dwarf planet located in what is known as the Kuiper Belt (like the asteroid belt between Mars and Jupiter but located on the edge of our solar system and much bigger). It is about 2/3 the width of the Earth’s moon which is about 2,380km (or 1,400mi). A day on Pluto is 153 Earth hours or 6 Earth days while it takes 248 Earth years for it to orbit the Sun. It has 5 moons, one of which is so big it orbits with it like a double planet. The atmosphere is thin and made of nitrogen, methane and carbon monoxide and has a temperature of about -232°C (-387°F) which makes it way too cold to sustain any life.</p>
+				<a href="Images/pluto-og.png" target="_blank"><img src="Images/pluto-300px.png" alt="Pluto"></a>
+			</section>
+
+			<section>
+				<h2 id="ceres">Ceres</h2>
+				<p>The only dwarf planet located in the inner solar system and is the biggest object in the asteroid belt. While Ceres makes up 25% of the asteroid belt’s total mass, it still isn’t as big as Pluto. A day on Ceres is only 9 Earth hours and it takes 4.6 Earth Years to orbit the Sun once. While there is no evidence of an atmosphere on Ceres, there is some water vapor that is thought to be ice ejected from small impacts. Because of this, scientists are interested to see if there actually is any signs of life.</p>
+				<a href="Images/ceres-og.jpg" target="_blank"><img src="Images/ceres-300px.png" alt="Ceres"></a>
+			</section>
+				
+			<section>
+				<h2 id="makemake">Makemake</h2>
+				<p>This dwarf planet is the second brightest object in the Kuiper Belt, next to Pluto, and is slightly smaller than Pluto. It has one unconfirmed/provisional moon. A day on Makemake would be about 22.4 Earth hours and it takes about 305 Earth years to revolve once around the Sun. Not much else is known about this dwarf planet.</p>
+			</section>
+				
+			<section>
+				<h2 id="haumea">Haumea</h2>
+				<p>Another dwarf planet located in the Kuiper Belt, Haumea is around the same size as Pluto. Its own rotation is so fast, it distorts its shape and makes it look like an American football. On that note, a day on Haumea is about 4 Earth hours, making it one of the fastest rotating large objects in our solar system. Haumea also takes 285 Earth years to revolve once around the Sun.</p>
+			</section>
+				
+			<section class="last">
+				<h2 id="eris">Eris</h2>
+				<p>Eris is actually one of, if not the one, that caused the reclassification of Pluto as a dwarf planet due to its slightly larger size (Pluto having a radius of 1,151km (715mi) and Eris with a radius of 1,163km (722mi)). A day on Eris is about 25.9 Earth hours while it takes 557 Earth years to go around the Sun once. This dwarf is still being studied so there is still limited information on Eris.</p>
+			</section>
+
+			
+			
+		</main>
+
+	</body>
+</html>

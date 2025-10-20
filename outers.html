@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css">
+		<title>Major Project - Outers</title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#inners").mouseenter(function(){
+					$("#navInners").stop().show(1500);
+				}).mouseleave(function(){
+					$("#navInners").hide(1000);
+				});
+
+				$("#outers").mouseenter(function(){
+					$("#navOuters").stop().show(1500);
+				}).mouseleave(function(){
+					$("#navOuters").hide(1000);
+				});
+
+				$("#dwarves").mouseenter(function(){
+					$("#navDwarves").stop().show(1500);
+				}).mouseleave(function(){
+					$("#navDwarves").hide(1000);
+				});
+
+				$("nav#sideNav ul li a").click(function(event){
+					event.preventDefault();
+					var target = $( $(this).attr('href') ).position().top;
+					$('html,body').stop().animate({ 
+						scrollTop: target 
+					},{ 
+						duration: 1000
+					}) 
+				});
+
+
+			})
+		</script>
+	</head>
+
+	<body>
+		<main>
+
+			<header>
+				<h1>The Solar System</h1>	
+			</header>
+			
+
+			<img src="Images/earth-300px.png" alt="inners" class="hidden" id="navInners">
+
+			<img src="Images/jupiter-300px.png" alt="outers" class="hidden" id="navOuters">
+
+			<img src="Images/pluto-300px.png" alt="dwarves" class="hidden" id="navDwarves">
+
+			<nav id="navMain">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+
+					<li><a href="inners.html" class="mainNav" id="inners">Inners</a></li>
+
+					<li><a href="outers.html" class="mainNav" id="outers">Outers</a></li>
+
+					<li><a href="dwarves.html" class="mainNav" id="dwarves">Dwarfs</a></li>
+
+					<li><a href="sources.html">Sources</a></li>
+				</ul>
+
+			</nav>
+
+
+			<nav id="sideNav">
+				<ul>
+					<li><a href="#jupiter">Jupiter</a></li>
+					<li><a href="#saturn">Saturn</a></li>
+					<li><a href="#uranus">Uranus</a></li>
+					<li><a href="#neptune">Neptune</a></li>
+				</ul>
+				
+			</nav>
+
+			<h1>Outer Planets</h1>
+
+			<p>These are the other 4 planets and are the largest of the 8 in our solar system. They are also located just outside the asteroid belt which separates the inner from the outer planets. They are often referred to as the “gas giants” due to their shared characteristics of their atmospheres.</p>
+
+			<section>
+				<h2 id="jupiter">Jupiter</h2>
+				<p>The fifth planet from the Sun, Jupiter is also the biggest of the planets in our solar system (it has more than twice the mass of all the other planets combined) as well as the closest of the gas giants. Jupiter has 79 moons discovered so far and a slight ring system around it. A day on Jupiter is about 10 hours on Earth, but it takes 12 Earth years for Jupiter to go around the Sun once. The atmosphere is mainly made of hydrogen (H2) and helium (He). The stripes seen on Jupiter are cold, windy clouds of ammonia and water floating in the atmosphere. The Great Red Spot seen on it is a giant storm bigger than the size of Earth and is said to have been going on for hundreds of years.</p>
+				<a href="Images/jupiter-og.png" target="_blank"><img src="Images/jupiter-300px.png" alt="jupiter"></a>
+			</section>
+
+			<section>
+				<h2 id="saturn">Saturn</h2>
+				<p>Saturn is the second largest planet in our system and the sixth planet from the Sun. This planet is unique due to its visible rings made of ice and rock. There are 7 main rings named alphabetically in the order they were discovered, however the placement order starting from the inner ring is: D ring, C ring, B ring, A ring, F ring, G ring, and E ring. There is a large gap between the A and B rings measuring about 4,700km (or 2,920mi), which is called the Cassini Division. It is similar to Jupiter, however, in that its atmosphere is made of hydrogen and helium. A day on Saturn is estimated to be about 10.7 Earth hours while it takes 29 Earth years for Saturn to go around the Sun once.</p>
+				<a href="Images/saturn-og.png" target="_blank"><img src="Images/saturn-300px.png" alt="Saturn"></a>
+			</section>
+				
+			<section>
+				<h2 id="uranus">Uranus</h2>
+				<p>Probably one of the more curious planets, the ice giant Uranus is the seventh planet from the Sun that rotates at an almost 90-degree angle from its plane of orbit (one theory is this was due a massive collision). In other words, it orbits the Sun more like a rolling ball as opposed to a spinning top. A day on Uranus is about 17 Earth hours and it takes 84 Earth years to orbit the Sun once. Uranus is the other planet that rotates from East to West, unlike most of the others. The atmosphere is mainly made of hydrogen and helium but has some amount of methane (which gives it its blue color) as well as water and ammonia. Uranus also has 27 moons, of which some are composed of both ice and rock.</p>
+				<a href="Images/uranus-og.jpg" target="_blank"><img src="Images/uranus-300px.png" alt="Uranus"></a>
+			</section>
+
+			<section class="last">
+				<h2 id="neptune">Neptune</h2>
+				<p>The last planet (since Pluto was downgraded to a dwarf) furthest away from the Sun, Neptune, is about 4 times wider than Earth which is similar to Uranus. Also similar to Uranus, it is an ice giant and has an atmosphere of hydrogen, helium and a bit of methane (also getting its color from it). However, despite these similarities, there has been a clear distinction between the color of both Neptune (vivid blue-like) and Uranus (blue-greenish) that still remains unexplained. A day on Neptune is 16 Earth hours while it takes 165 Earth years to orbit the Sun once.</p>
+				<a href="Images/neptune-og.jpg" target="_blank"><img src="Images/neptune-300px.png" alt="Neptune"></a>
+			</section>
+
+			
+			
+		</main>
+
+	</body>
+</html>
