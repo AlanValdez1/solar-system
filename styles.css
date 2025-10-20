@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto+Mono&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+/*CSS rules for specific families
+font-family: 'Fira Mono', monospace;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Source Code Pro', monospace;*/
+
+
+body{
+	background-color: #0B0638;
+	color: white;
+	font-family: sans-serif;
+	background-image: url(Images/stars.gif);
+	background-attachment: fixed;
+}
+
+main{
+	margin-left: 400px;
+	width: 700px;
+}
+
+header{
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Source Code Pro';
+}
+
+p{
+	font-family: 'Roboto Mono';
+}
+
+nav{
+	width: 200px;
+	height: 350px;
+	position: relative;
+	font-family: monospace;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+nav ul li{
+	margin: 0;
+}
+
+nav ul li a, nav ul li a:link, nav ul li a:visited{
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	display: block;
+	box-sizing: border-box;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	padding-top: 15px;
+	transition: all .5s;
+}
+
+nav ul li a:hover, nav ul li a:active{
+	background-color: #00DBFF;
+	color: black;
+	font-size: 20px;
+}
+
+nav#sideNav {
+	position: fixed;
+	color: white;
+	width: 150px;
+	height: auto;
+	left: 25px;
+	top: 225px;
+}
+
+
+nav#sideNav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+nav#sideNav ul li a, nav#sideNav ul li a:link, nav#sideNav ul li a:visited {
+	text-decoration: none;
+	display: block;
+	padding: 10px /*10px 10px 20px*/;
+	width: 170px;
+} 
+nav#sideNav ul li a:hover, nav#sideNav ul li a:active {
+	width: 170px;
+} 
+
+
+#navInners, #navOuters, #navDwarves{
+	float: right;
+	height: 300px;
+}
+
+h1{
+	text-align: center;
+	font-family: monospace;
+}
+
+.hidden{
+	display: none;
+}
+
+.planets{
+	position: relative;
+}
+
+#mercuryDrag{
+	z-index: 18;
+}
+#marsDrag{
+	z-index: 17;
+}
+#earthDrag{
+	z-index: 16;
+}
+#venusDrag{
+	z-index: 15;
+}
+#neptuneDrag{
+	z-index: 14;
+}
+#uranusDrag{
+	z-index: 13;
+}
+#saturnDrag{
+	z-index: 12;
+}
+#jupiterDrag{
+	z-index: 11;
+}
+
+.sourceColor{
+	color: red;
+}
+
+.last{
+	margin-bottom: 500px;
+}
